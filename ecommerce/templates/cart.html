@@ -38,7 +38,7 @@
                     {% for cart_item in cart_items %}
                         <tr>
                             <td>
-                                <a href="cart_item.product.get_absolute_url"> <img src="{{cart_item.product.image.url}}" alt="" class="float-left rounded custom_image" height="100" width="100"> </a>
+                                <a href="{% url 'cart_app:cart_detail' %}"> <img src="{{cart_item.product.image.url}}" alt="" class="float-left rounded custom_image" height="100" width="100"> </a>
                             </td>
                             <td class="text-left">
                                 {{cart_item.product.name}}
